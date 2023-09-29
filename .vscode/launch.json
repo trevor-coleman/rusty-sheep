@@ -18,13 +18,13 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=bevy_game",
-                    "--package=bevy_game",
+                    "--bin=rusty_sheep",
+                    "--package=rusty_sheep",
                     "--features",
                     "dev"
                 ],
                 "filter": {
-                    "name": "bevy_game",
+                    "name": "rusty_sheep",
                     "kind": "bin"
                 },
             },
@@ -49,13 +49,13 @@
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=bevy_game",
-                    "--package=bevy_game",
+                    "--bin=rusty_sheep",
+                    "--package=rusty_sheep",
                     "--features",
                     "dev"
                 ],
                 "filter": {
-                    "name": "bevy_game",
+                    "name": "rusty_sheep",
                     "kind": "bin"
                 }
             },

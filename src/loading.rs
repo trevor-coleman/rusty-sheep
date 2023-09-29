@@ -38,4 +38,8 @@ pub struct AudioAssets {
 pub struct TextureAssets {
     #[asset(path = "textures/bevy.png")]
     pub texture_bevy: Handle<Image>,
+    #[asset(path = "textures/tile_grass_1.png")]
+    pub texture_tile_grass_1: Handle<Image>,
+    #[asset(path = "textures/tile_grass_2.png")]
+    pub texture_tile_grass_2: Handle<Image>
 }
