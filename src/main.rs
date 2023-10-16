@@ -16,6 +16,7 @@ fn main() {
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             primary_window: Some(Window {
                 title: "Rusty Sheep".to_string(),
+                position: WindowPosition::At((-1000, -1000).into()),
                 resolution: (800., 600.).into(),
                 // Bind to canvas included in `index.html`
                 canvas: Some("#bevy".to_owned()),

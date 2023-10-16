@@ -18,13 +18,13 @@ impl Plugin for PlayerPlugin {
 }
 
 fn spawn_player(mut commands: Commands, textures: Res<TextureAssets>) {
-    // commands
-    //     .spawn(SpriteBundle {
-    //         texture: textures.texture_bevy.clone(),
-    //         transform: Transform::from_translation(Vec3::new(0., 0., 1.)),
-    //         ..Default::default()
-    //     })
-    //     .insert(Player);
+    commands
+        .spawn(SpriteBundle {
+            texture: textures.dog.clone(),
+            transform: Transform::from_translation(Vec3::new(0., 0., 1.)).with_scale(Vec3::new(0.5,0.5,0.5)),
+            ..Default::default()
+        })
+        .insert(Player);
 }
 
 fn move_player(
@@ -37,8 +37,8 @@ fn move_player(
     }
     let speed = 150.;
     let movement = Vec3::new(
-        actions.player_movement.unwrap().x * speed * time.delta_seconds(),
-        actions.player_movement.unwrap().y * speed * time.delta_seconds(),
+        actions.player_movement.unwrap().x * &speed * time.delta_seconds(),
+        actions.player_movement.unwrap().y * &speed * time.delta_seconds(),
         0.,
     );
     for mut player_transform in &mut player_query {

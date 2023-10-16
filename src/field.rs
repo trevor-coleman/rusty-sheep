@@ -16,6 +16,8 @@ pub struct Field {
 impl Field {
     pub fn new(width: f32, height: f32) -> Self {
         let origin = (&width / -2.0, &height / 2.0);
+        println!("Field origin: {:?}", origin);
+
         Self { width, height, origin, sprites: vec![] }
     }
 
@@ -77,7 +79,7 @@ impl Field {
 
     pub fn spawn_tiles(&mut self, commands: &mut Commands, textures: &Res<TextureAssets>) {
 
-        &self.despawn_tiles(commands);
+        let _ = &self.despawn_tiles(commands);
 
         let (x, y) = self.tile_origin(None, None);
         let mut x = x;
