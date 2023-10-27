@@ -12,6 +12,7 @@ use crate::field::FieldPlugin;
 use crate::loading::LoadingPlugin;
 use crate::menu::MenuPlugin;
 use crate::player::PlayerPlugin;
+use crate::sheep::SheepPlugin;
 
 mod actions;
 mod audio;
@@ -20,6 +21,7 @@ mod menu;
 mod player;
 mod field;
 mod dog;
+mod sheep;
 
 // This example game uses States to separate logic
 // See https://bevy-cheatbook.github.io/programming/states.html
@@ -46,7 +48,8 @@ impl Plugin for GamePlugin {
                 ActionsPlugin,
                 InternalAudioPlugin,
                 // PlayerPlugin,
-                DogPlugin,
+                // DogPlugin,
+                SheepPlugin,
                 FieldPlugin,
             ));
 

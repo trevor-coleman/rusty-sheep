@@ -17,7 +17,7 @@ fn main() {
             primary_window: Some(Window {
                 title: "Rusty Sheep".to_string(),
                 position: WindowPosition::At((-1000, -1000).into()),
-                resolution: (800., 600.).into(),
+                resolution: (2000., 2000.).into(),
                 // Bind to canvas included in `index.html`
                 canvas: Some("#bevy".to_owned()),
                 // Tells wasm not to override default event handling, like F5 and Ctrl+R
